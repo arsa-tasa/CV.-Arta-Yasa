@@ -1,0 +1,289 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0px;
+    background-color: #f2f5f9;
+    color: #263238;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    padding-top: 100px;
+}
+p {
+    text-align: justify;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 16px 24px;
+    margin-bottom: 28px;
+    background-color: #f2f5f9;
+    position:sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #174a7e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.navbar a:hover {
+    color: #68b1fa;
+}
+
+.navbar .navbar-brand {
+    margin-right: auto;
+    color: #f1f1f1;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Kartu CV */
+.cv {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 36px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* Profil */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.foto-profil {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #68b1fa;
+}
+
+.profile-info h1 {
+    margin: 0 0 8px;
+    color: #174a7e;
+}
+
+.profesi {
+    font-weight: bold;
+    color: #536579;
+}
+
+/* Kategori */
+.cv section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #dce3eb;
+    scroll-margin-top: 100px;
+}
+
+.cv h2 {
+    color: #174a7e;
+    font-size: 23px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dce6f1;
+}
+
+.cv h3 {
+    color: #263b53;
+}
+
+.cv li {
+    margin-bottom: 6px;
+}
+
+.cv a {
+    color: #1769aa;
+}
+
+.cv a:hover {
+    color: #174a7e;
+}
+
+/* Tabel pendidikan */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-top: 18px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dce3eb;
+    text-align: left;
+}
+
+th {
+    background-color: #eaf2fb;
+    color: #174a7e;
+}
+
+/* Daftar definisi */
+dt {
+    margin-top: 12px;
+    color: #174a7e;
+}
+
+dd {
+    margin-left: 20px;
+}
+
+/* Form kontak */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc9d6;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: 2px solid #68b1fa;
+    border-color: #174a7e;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #174a7e;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #10365c;
+}
+
+.catatan-form {
+    color: #687787;
+    font-size: 13px;
+}
+
+/* Footer */
+.footer {
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 20px;
+    text-align: center;
+    color: #536579;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .navbar {
+        justify-content: flex-start;
+        gap: 14px;
+        padding: 14px;
+    }
+    .cv {
+        padding: 20px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .foto-profil {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+
+/* Kartu untuk setiap bagian CV */
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Judul di dalam kartu */
+.card h2 {
+    color: #174a7e;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Jarak paragraf dalam kartu */
+.card p {
+    line-height: 1.8;
+}
+
+/* Efek saat kartu diarahkan kursor */
+.card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease;
+}
+.img-portofolio{
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+body.portofolio{
+    margin: 0 auto;
+    padding: 36px;
+}
+.portofolio {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 36px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
